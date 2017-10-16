@@ -1,0 +1,8 @@
+req-helpers:
+  authorization: 
+  client-id: 
+  client-secret: 
+  accept: 
+  patient-url: 
+  observation-url: 
+  condition-url: 
