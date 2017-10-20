@@ -2,7 +2,10 @@ req-helpers:
   authorization: 
   client-id: 
   client-secret: 
-  accept: 
-  patient-url: 
-  observation-url: 
-  condition-url: 
+  accept: application/json
+  endpoints:
+    patient: 
+    patient-problems: 
+    patient-lab-results: 
+    patient-vital-signs: 
+    patient-encounters: 

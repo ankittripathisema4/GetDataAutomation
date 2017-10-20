@@ -51,7 +51,7 @@
 			<artifactId>hibernate-validator</artifactId>
 			<version>4.3.1.Final</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>ca.uhn.hapi.fhir</groupId>
 			<artifactId>hapi-fhir-base</artifactId>

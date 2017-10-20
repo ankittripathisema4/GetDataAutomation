@@ -17,28 +17,14 @@ public class RestClientService {
 
 	@Autowired
 	private AppConfig appConfig;
-
-	public JSONObject getPatientResponse() {
-		String patientUrl = appConfig.getPatientUrl();
-		System.out.println("########### Getting Patient Response ########### " +patientUrl);
-		return getJsonResponse(patientUrl);
-	}
 	
-	public JSONObject getObservationResponse() {
-		String observationUrl = appConfig.getObservationUrl();
-		System.out.println("########### Getting Observation Response ########### " +observationUrl);
-		return getJsonResponse(observationUrl);
-	}
-	
-	public JSONObject getConditionResponse(){
-		String conditionUrl = appConfig.getConditionUrl();
-		System.out.println("########### Getting Condition Response ########### " +conditionUrl);
-		return getJsonResponse(conditionUrl);
+	public JSONObject getResponse(String url) {
+		System.out.println("########### Getting Response ########### " +url);
+		return getJsonResponse(url);
 	}
 	
 	private JSONObject getJsonResponse(String url){
 		RestTemplate restTemplate = new RestTemplate();	
-		restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
 		restTemplate.getMessageConverters().add(new MappingJackson2HttpMessageConverter());
 
 		HttpEntity<Object> request = new HttpEntity<Object>(Object.class, appConfig.getRequestHeaders());

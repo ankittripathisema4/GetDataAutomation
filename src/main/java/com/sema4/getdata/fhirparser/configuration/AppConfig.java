@@ -23,14 +23,7 @@ public class AppConfig {
 
 	private String accept;
 	
-	@NotNull
-	private String patientUrl;
-	
-	@NotNull
-	private String observationUrl;
-	
-	@NotNull
-	private String conditionUrl;
+	private Endpoints endpoints;
 	
 	public HttpHeaders getRequestHeaders(){
 		HttpHeaders headerMap = new HttpHeaders();
@@ -71,23 +64,12 @@ public class AppConfig {
 	public void setAccept(String accept) {
 		this.accept = accept;
 	}
-	public String getPatientUrl() {
-		return patientUrl;
+
+	public Endpoints getEndpoints() {
+		return endpoints;
 	}
-	public void setPatientUrl(String parientUrl) {
-		this.patientUrl = parientUrl;
+	public void setEndpoints(Endpoints endpoints) {
+		this.endpoints = endpoints;
 	}
-	public String getObservationUrl() {
-		return observationUrl;
-	}
-	public void setObservationUrl(String observationUrl) {
-		this.observationUrl = observationUrl;
-	}
-	public String getConditionUrl() {
-		return conditionUrl;
-	}
-	public void setConditionUrl(String conditionUrl) {
-		this.conditionUrl = conditionUrl;
-	}
-	
+
 }

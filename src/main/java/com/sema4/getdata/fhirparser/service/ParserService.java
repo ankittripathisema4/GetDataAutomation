@@ -25,18 +25,8 @@ public class ParserService {
 	    //parser.setParserErrorHandler(new StrictErrorHandler());
 	}
 	
-	public Bundle parsePatientResponse(){
-		JSONObject resp = restClientService.getPatientResponse();
-		return parser.parseResource(Bundle.class, resp.toString());
-	}
-	
-	public Bundle parseObservationResponse(){
-		JSONObject resp = restClientService.getObservationResponse();
-		return parser.parseResource(Bundle.class, resp.toString());
-	}
-	
-	public Bundle parseConditionResponse(){
-		JSONObject resp = restClientService.getConditionResponse();
+	public Bundle parseResponse(String url){
+		JSONObject resp = restClientService.getResponse(url);
 		return parser.parseResource(Bundle.class, resp.toString());
 	}
 }
