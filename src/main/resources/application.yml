@@ -1,10 +1,10 @@
 req-helpers:
-  authorization: 
-  client-id: 
-  client-secret: 
+  authorization: Basic YXBpYmFzaWM6UGFzc3dvcmQxMjM=
+  client-id: 872cf741c90a4b429043f9bcbce0bd9d
+  client-secret: 399253aA4A754C8Aab5106d10dD0a23F
   accept: application/json
   endpoints:
-    patient: 
+    patient: https://apiconnect-dev.mountsinai.org/api/Patient?firstname=ROBERT&lastname=SMITH&birthdate=08/19/72&gender=M
     patient-problems: 
     patient-lab-results: 
     patient-vital-signs: 
